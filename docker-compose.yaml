@@ -1,0 +1,9 @@
+version: "3"
+
+services:
+  vault:
+    image: vault:1.11.11 # Specify the version here
+    container_name: vault
+    ports:
+      - "8200:8200"
+    command: server -dev
