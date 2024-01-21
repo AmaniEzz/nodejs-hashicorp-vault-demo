@@ -1,8 +1,8 @@
 require("dotenv").config();
 
 const authenticateVaultClient = async () => {
-  // TODO: read variables and token from config file or .env file
   const vaultClient = require("node-vault")({
+    // NOTE: this only works with kv v1 engines
     apiVersion: "v1",
     endpoint: process.env.VAULT_ENDPOINT ,
     token: process.env.ROOT_TOKEN,
